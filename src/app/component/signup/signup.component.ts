@@ -19,6 +19,16 @@ export function passwordsMatchValidator(): ValidatorFn {
   };
 }
 
+export function containsCapitalLetter(control: FormControl) {
+  const hasCapitalLetter = /[A-Z]/.test(control.value);
+  if (!hasCapitalLetter) {
+    return {
+      containsCapitalLetter: true
+    };
+  }
+  return null;
+}
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -29,7 +39,7 @@ export class SignupComponent {
   signUpForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6), containsCapitalLetter]),
     confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
   }, { validators: passwordsMatchValidator() })
   constructor(private authService : AuthenticationService, private router : Router,
