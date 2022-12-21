@@ -1,7 +1,6 @@
 import { test, expect, chromium } from '@playwright/test';
 
 test('input', async() => {
-    test.setTimeout(100000);
     const browser = await chromium.launch({
         headless: false
     });
