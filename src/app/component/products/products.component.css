@@ -1,0 +1,30 @@
+.card{
+    padding: 25px;
+    margin: 50px;
+}
+
+h5{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+
+p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
