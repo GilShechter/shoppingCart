@@ -8,7 +8,9 @@
     <strong>{{ (productList | filter : keyWord)?.length }}</strong> items found
   </p>
   <div class="row" id="filteredItems">
-    <ng-container *ngFor="let item of productList | filter : keyWord">
+    <ng-container
+      *ngFor="let item of productList | filter : keyWord; let i = index"
+    >
       <div class="card col-md-3">
         <img src="{{ item.image }}" alt="" />
         <h5>{{ item.title }}</h5>
