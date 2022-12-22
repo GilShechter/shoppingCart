@@ -12,6 +12,10 @@ export class ProductsComponent {
   public keyWord : string = '';
   constructor(private api : ApiService, private cartService: CartService) { }
 
+  /**
+   * Gets the products from the API, and adds the quantity and total properties to each product
+   * Items will be filtered by the search keyWord
+   */
   ngOnInit(): void {
     this.api.getProducts().subscribe(res => {
       this.productList = res;
@@ -25,6 +29,11 @@ export class ProductsComponent {
     })
   }
 
+  /**
+   * Adds new item to the cart
+   * 
+   * @param item - the product to add to the cart
+   */
   addToCart(item : any){
     this.cartService.addToCart(item);
   }

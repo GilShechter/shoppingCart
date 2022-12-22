@@ -1,5 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * Filters products by title
+ * Gets a key words from the search bar, iterates over the products
+ * and returns only the products that include the key word
+ * 
+ * @param value - the products array
+ * @param keyWord - the key word to search
+ * @returns the filtered products array
+ */
 @Pipe({
   name: 'filter'
 })

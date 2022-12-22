@@ -23,14 +23,23 @@ export class LoginComponent {
   ngOnInit(): void {
   }
 
+  /**
+   * Gets the email field from the login form
+   */
   get email() {
     return this.loginForm.get('email');
   }
 
+  /**
+   * Gets the password field from the login form
+   */
   get password() {
     return this.loginForm.get('password');
   }
 
+  /**
+   * Submits the login form, if it's valid
+   */
   submit() {
     if (!this.loginForm.valid) {
       return;
