@@ -1,8 +1,4 @@
-<div class="card-top container-fluid">
-  <div class="container d-flex">
-    <div class="item"></div>
-  </div>
-</div>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <div class="container">
   <p style="margin-left: 50px; margin-bottom: -20px">
     <strong>{{ (productList | filter : keyWord)?.length }}</strong> items found
@@ -11,16 +7,18 @@
     <ng-container
       *ngFor="let item of productList | filter : keyWord; let i = index"
     >
-      <div class="card col-md-3">
-        <img src="{{ item.image }}" alt="" />
-        <h5>{{ item.title }}</h5>
-        <p>{{ item.description }}</p>
-        <p style="color: darkgreen">
-          <strong>${{ item.price }}</strong>
-        </p>
-        <button class="btn btn-outline-success" (click)="addToCart(item)">
-          Add to cart
-        </button>
+      <div class="col-md-3">
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+          <img src="{{ item.image }}" alt="" />
+          <h5>{{ item.title }}</h5>
+          <p>{{ item.description }}</p>
+          <p style="color: darkgreen">
+            <strong>${{ item.price }}</strong>
+          </p>
+          <button class="btn btn-outline-success" (click)="addToCart(item)">
+            Add to cart
+          </button>
+        </div>
       </div>
     </ng-container>
   </div>

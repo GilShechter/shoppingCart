@@ -1,30 +1,60 @@
-.card{
+.card {
     padding: 25px;
-    margin: 50px;
+    margin-bottom: 50px;
+    width: 280px;
 }
 
-h5{
+.row {
+    margin-top: 50px;
+}
+
+h5 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100ch;
 }
 
-p{
+p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100ch;
 }
 
-img{
+img {
     width: 200px;
     height: 200px;
     margin-bottom: 15px;
     transition: 0.3s ease-in-out;
 }
 
-img:hover{
+img:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    .card {
+        padding: 10px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1300px) {
+    .card {
+        padding: 10px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    img {
+        width: 100%;
+    }
 }
