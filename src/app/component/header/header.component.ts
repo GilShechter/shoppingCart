@@ -22,7 +22,10 @@ export class HeaderComponent {
   ngOnInit() {
     (this.cart.getProducts())
     .subscribe(res => {
-      this.itemsCount = res.length;
+      this.itemsCount = 0;
+      res.forEach((item: any) => {
+        this.itemsCount += item.quantity;
+      });
     })
   }
 

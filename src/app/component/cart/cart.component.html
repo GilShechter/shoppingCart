@@ -32,13 +32,14 @@
                 <input
                   type="number"
                   value="1"
+                  min="0"
                   style="width: 70px; border-radius: 3px"
                   id="quantity"
                   [(ngModel)]="item.quantity"
                   (change)="updateQuantity(item, $event)"
                 />
               </td>
-              <td style="width: 100px">${{ item.total }}</td>
+              <td style="width: 100px">${{ item.total.toFixed(2) }}</td>
               <td>
                 <button
                   type="button"

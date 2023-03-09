@@ -53,7 +53,13 @@ export class CartService {
    * @param {product} - product to add 
    */
   addToCart(product : any){
-    this.cartItemList.push(product);
+    const existingItem = this.cartItemList.find((p: { id: any; }) => p.id === product.id);
+    if (existingItem){
+      existingItem.quantity += 1;
+      existingItem.total += existingItem.price;
+    }else{
+      this.cartItemList.push(product);
+    }
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
     this.usersService.updateUser(this.cartItemList);
@@ -83,5 +89,4 @@ export class CartService {
     this.productList.next(this.cartItemList);
     this.usersService.updateUser(this.cartItemList);
   }
-
 }

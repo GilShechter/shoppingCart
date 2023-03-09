@@ -1,3 +1,4 @@
+import { HeaderComponent } from './../header/header.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { Component } from '@angular/core';
 import { collection, Firestore } from '@angular/fire/firestore';
@@ -48,12 +49,11 @@ export class CartComponent {
    * @param {any} event - the event that triggered the function
    */
   updateQuantity(item: any, event: any) {
-    this.products.map((a: any) => {
-      if(item.id === a.id) {
-        a.quantity = event.target.value;
-        a.total = a.price * a.quantity;
-        this.totalPrice = this.cart.getTotalPrice().toFixed(2);
-      }
-    })
+    const existingItem = this.products.find((p: { id: any; }) => p.id === item.id);
+    if (existingItem){
+      existingItem.quantity = event.target.value;
+      existingItem.total = existingItem.price * existingItem.quantity;
+      this.totalPrice = this.cart.getTotalPrice().toFixed(2);
+    }
   }
 }
