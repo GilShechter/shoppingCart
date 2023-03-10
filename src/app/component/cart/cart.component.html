@@ -36,7 +36,7 @@
                   style="width: 70px; border-radius: 3px"
                   id="quantity"
                   [(ngModel)]="item.quantity"
-                  (change)="updateQuantity(item, $event)"
+                  (change)="updateQuantity(item, item.quantity)"
                 />
               </td>
               <td style="width: 100px">${{ item.total.toFixed(2) }}</td>

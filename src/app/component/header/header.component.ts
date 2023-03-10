@@ -20,12 +20,9 @@ export class HeaderComponent {
    * Gets the products from the cart, updates the items count
    */
   ngOnInit() {
-    (this.cart.getProducts())
-    .subscribe(res => {
-      this.itemsCount = 0;
-      res.forEach((item: any) => {
-        this.itemsCount += item.quantity;
-      });
+    this.cart.getItemsCount()
+    .subscribe(number => {
+      this.itemsCount = number;
     })
   }
 
