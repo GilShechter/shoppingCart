@@ -78,20 +78,14 @@
 <ng-container *ngIf="products.length == 0">
   <div class="container">
     <div class="card">
-      <h2 style="font-size: 20px">My Cart</h2>
+      <h2>My Cart</h2>
       <div class="center">
         <img src="assets/images/online-store.png" alt="trolley" />
         <h3>
           No items yet?<br />
           Tap below to explore
         </h3>
-        <button
-          class="btn btn-success"
-          routerLink="/products"
-          style="max-width: 200px"
-        >
-          Shop now
-        </button>
+        <button class="btn btn-success" routerLink="/products">Shop now</button>
       </div>
     </div>
   </div>

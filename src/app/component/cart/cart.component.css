@@ -31,3 +31,32 @@ img{
 h3{
     font-size: large;
 }
+
+h2{
+    font-size: 20px;
+}
+
+button{
+    max-width: 200px
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+      margin: 10px;
+      margin-top: 50px;
+    }
+  
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+}
+
