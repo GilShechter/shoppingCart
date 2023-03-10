@@ -14,7 +14,7 @@ export class HeaderComponent {
   public keyWord : string = '';
   user$ = this.usersService.currentUserProfile$;
   constructor(private cart : CartService, private auth : AuthenticationService, 
-              private router : Router, private usersService : UsersService) { }
+              public router : Router, private usersService : UsersService) { }
 
   /**
    * Gets the products from the cart, updates the items count
