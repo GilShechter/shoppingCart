@@ -1,11 +1,11 @@
-.card{
+.card {
     height: 60vh;
     padding: 25px;
     margin: 50px;
     margin-top: 100px;
 }
 
-.center{
+.center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -13,50 +13,89 @@
     text-align: center;
 }
 
-img{
+img {
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
 }
 
-.card-table{
+.card-table {
     position: relative;
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
 }
 
-h3{
+h3 {
     font-size: large;
 }
 
-h2{
+h2 {
     font-size: 20px;
 }
 
-button{
+button {
     max-width: 200px
 }
 
-@media screen and (max-width: 768px) {
-    .card {
-      margin: 10px;
-      margin-top: 50px;
-    }
-  
-    img {
-      width: 50%;
-      height: auto;
+@media screen and (max-width: 804px) {
+    .description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
     }
 
-    h2{
+    .card {
+        margin: 10px;
+        margin-top: 50px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
         font-size: 16px;
     }
 
-    h3{
+    h3 {
         font-size: 18px;
     }
 }
 
+@media (max-width: 767px) {
+
+    .table td,
+    .table th {
+        padding: .3rem;
+    }
+
+    .description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+    }
+
+    .card {
+        margin: 10px;
+        margin-top: 50px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}

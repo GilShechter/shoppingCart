@@ -4,21 +4,22 @@
     display: relative;
 }
 
-.navbar a{
+.navbar a {
     font-size: large;
     margin-right: 15px;
+    color: #fff;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #ffffff;
     text-decoration: none;
 }
 
-.form-control{
+.form-control {
     margin-right: 50px;
 }
 
-p{
+p {
     text-align: right;
     vertical-align: center;
     color: #ffffff;
