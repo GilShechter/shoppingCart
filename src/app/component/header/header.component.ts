@@ -40,7 +40,6 @@ export class HeaderComponent {
    * Logs out the user, empty cart and redirect to login page
    */
   logout(){
-    this.cart.removeAllCart();
     this.auth.logout().subscribe(() => {
       this.login();
     })

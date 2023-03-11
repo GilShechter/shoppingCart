@@ -1,7 +1,7 @@
-import { Firestore, doc, collection } from '@angular/fire/firestore';
+import { Firestore, doc, docData } from '@angular/fire/firestore';
 import { UsersService } from './users.service';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 /**
  * Cart service
@@ -22,8 +22,22 @@ export class CartService {
    * @returns {Observable<any>} - the products in the cart
    */
   getProducts(){
+    this.loadCart();
     return this.productList.asObservable();
   }
+
+  /**
+   * Loads the cart from the user's database
+   */
+  loadCart(){
+    const ref = doc(this.firestore, 'users', this.usersService.currUid);
+    docData(ref).subscribe((data:any) => {
+      this.cartItemList = data.cartItemsList;
+      this.productList.next(data.cartItemsList);
+      this.updateItemsCount();
+    })
+  }
+
 
   /**
    * @returns {Observable<number>} - the number of items in the cart
@@ -112,6 +126,7 @@ export class CartService {
     item.total = item.price * item.quantity;
     this.productList.next(this.cartItemList);
     this.updateItemsCount();
+    this.usersService.updateUser(this.cartItemList);
   }
 
   /**

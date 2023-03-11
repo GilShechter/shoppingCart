@@ -3,7 +3,6 @@ import { UserProfile } from './../models/user-profile';
 import { Injectable } from '@angular/core';
 import { doc, docData, Firestore, setDoc, updateDoc } from '@angular/fire/firestore';
 import { from, Observable, of, switchMap } from 'rxjs';
-
 /**
  * Users service
  */

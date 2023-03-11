@@ -27,6 +27,8 @@ export class ProductsComponent {
     this.cartService.search.subscribe((value: any) => {
       this.keyWord = value;
     })
+
+    this.cartService.getProducts();
   }
 
   /**
