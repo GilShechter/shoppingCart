@@ -27,3 +27,9 @@ p {
     margin-right: 50px;
     margin-top: 15px;
 }
+
+@media screen and (max-width: 991px) {
+    .form-group{
+        margin-bottom: 10px;
+    }
+}

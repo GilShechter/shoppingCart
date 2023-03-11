@@ -44,35 +44,16 @@
         </ul>
       </div>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo04"
-        aria-controls="navbarTogglerDemo04"
-        aria-expanded="true"
-        aria-label="Toggle navigation"
-      >
-        <mat-icon>account_circle</mat-icon>
-      </button>
-      <div
-        class="navbar-collapse collapse bg-dark text-end px-2"
-        id="navbarTogglerDemo04"
-        style=""
-      >
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <button
-              mat-button
-              [matMenuTriggerFor]="userMenu"
-              style="color: white !important"
-            >
-              <mat-icon>account_circle</mat-icon>
-              {{ user.name }}
-              <mat-icon>expand_more</mat-icon>
-            </button>
-          </li>
-        </ul>
+      <div>
+        <button
+          mat-button
+          [matMenuTriggerFor]="userMenu"
+          style="color: white !important"
+        >
+          <mat-icon>account_circle</mat-icon>
+          {{ user.name }}
+          <mat-icon>expand_more</mat-icon>
+        </button>
       </div>
     </ng-container>
     <ng-template #loggedOut>
