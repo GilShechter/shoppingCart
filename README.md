@@ -1,5 +1,8 @@
 # ShoppingCart
 
+### Go live
+Check out the website [here](https://shoppingcart-747fc.web.app/)
+
 ![screenshot](Screenshot.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
